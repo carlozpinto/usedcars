@@ -23,7 +23,7 @@ hist_button = st.button('Construir histograma')
 if hist_button:
     st.write(
         'Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
-    # Usando graph_objects como en tu Notebook
+    # Usando graph_objects
     fig = go.Figure(data=[go.Histogram(x=df['odometer'])])
     fig.update_layout(title_text='Distribución del Odómetro')
     st.plotly_chart(fig, use_container_width=True)
@@ -34,7 +34,7 @@ scatter_button = st.button('Construir gráfico de dispersión')
 
 if scatter_button:
     st.write('Relación entre el kilometraje (odómetro) y el precio')
-    # Usando graph_objects para el Scatter Plot como en tu captura
+    # Usando graph_objects
     fig_scatter = go.Figure(data=[go.Scatter(
         x=df['odometer'],
         y=df['price'],
